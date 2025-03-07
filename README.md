@@ -110,7 +110,7 @@ Ad.3 Update of SVG file with wind arrow in debug mode:
 python3 /etc/openhab/scripts/shaddow.py update 54 debug
 ```
 ### Rule
-You need to create a rule to call the script:
+You need to create an openHAB rule to call the script to update the SVG drawing:
 
 #### DSL (without wind arrow)
 ```

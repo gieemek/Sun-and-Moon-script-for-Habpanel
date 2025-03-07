@@ -5,7 +5,7 @@ I have adapted the @pmpkk and @kriznik script to the latest astral (v.3.2). The 
 I have converted the script to modular, so there is the possibility to include two buildings (optional). It will also be easy to rewrite the script for more shapes, if someone would need it.
 pictures of widget with multiple shapes:
 
-![multiple shapes](screen multiple shapes.jpg)
+![multiple_shapes](screen multiple shapes.jpg)
 
 ## GUIDELINE
 

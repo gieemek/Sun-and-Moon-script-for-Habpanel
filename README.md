@@ -4,7 +4,7 @@ Python script to create SVG file with sun and moon positions in relation to your
 I have adapted the @pmpkk and @kriznik script to the latest *astral* (v.3.2). The *astral* library now provides data for the moon, so installing pytz and plunar will no longer be necessary.
 I have converted the script to modular, so there is the possibility to include two buildings (optional). It will also be easy to rewrite the script for more shapes, if someone would need it.
 
-![dark_theme](screen multiple shapes.jpg)
+![multiple shapes](https://github.com/gieemek/Sun-and-Moon-script-for-Habpanel/blob/main/screen%20multiple%20shapes.jpg)
 
 ## Guideline
 

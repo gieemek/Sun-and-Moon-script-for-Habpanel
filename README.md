@@ -12,6 +12,7 @@ I have converted the script to modular, so there is the possibility to include t
 You need to:
 - add *astro:sun* Thing based on *astro* binding.
 - create Sun_Azimuth Item (Number:Angle) and link it with the *position#azimuth* channel of *astro:sun* Thing
+Note: If you want to have the wind arrow on the SVG drawing you need to have Wind_Angle Item too (optional).
 
 ### Shell
 You need to install *python3*:
@@ -129,7 +130,7 @@ then
     logInfo( "Shaddow", "Updating Shaddow SVG" + resp )
 end
 ```
-#### Jython
+#### Jython (with wind arrow)
 ```
 from core.rules import rule
 from core.triggers import when
@@ -137,6 +138,7 @@ from core.actions import LogAction, Exec
 
 @rule( "Run script shaddow", description = "Run script to create SVG drawing with sun and moon positions in relation to the house", tags = [ "shaddow" ] )
 @when( "Item Sun_Azimuth changed" )
+@when( "Item Wind_Angle changed" )
 
 def runScriptToCreateSVGfile( event ) :
 	resp = Exec.executeCommandLine( Duration.ofSeconds(10), "python3", "/etc/openhab/scripts/shaddow.py", "update", str( items[ "Wind_Angle" ].floatValue() ) )

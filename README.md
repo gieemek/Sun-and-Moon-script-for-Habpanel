@@ -84,9 +84,9 @@ To check if script works properly, you can start it:
 python3 /etc/openhab/scripts/shaddow.py
 ```
 with optional parameters:
-1 update		- updates the SVG image
-2 wind angle	- draws the wind arrow with given angle. Should be number between 0 – 360 degrees.
-3 debug		- runs script in debug mode
+1. update		- updates the SVG image
+2. wind angle	- draws the wind arrow with given angle. Should be number between 0 – 360 degrees.
+3. debug		- runs script in debug mode
 Note: It is necessary to specify the preceding parameters if you want to use the following ones.
 #### Example:
 Ad.1 Update of SVG file without wind arrow:

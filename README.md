@@ -57,7 +57,9 @@ SHAPE_2 = [
    ]
 ```
 Note: shapes have to be inside in the 100 x 100pt square.
+
 Note: you should use any graphical program to read X and Y value of each corner of your house.
+
 Note: You could start from any point, but point order have to be clockwise.
 
 Below is the drawing how to order points in the shapes:
@@ -146,6 +148,7 @@ def runScriptToCreateSVGfile( event ) :
 	LogAction.logInfo( "rule:runScriptToCreateSVGfile", "Updating shaddow.SVG file: {}", resp )
 ```
 Note: If you have put the script to other location, you need to change path in the rule.
+
 Note: if your Items have other name, you have to use their names in the rule.
 
 ### Habpanel
@@ -157,4 +160,5 @@ Add a template widget with this content:
 The *?{{itemValue(‘Sun_Azimuth’)}}* ensures that the SVG gets refreshed automatically as the azimuth changes.
 
 Note: If you have changed the location or name of SVG file in the script, you need to change these in the template definition.
+
 Note: If you have named sun azimuth Item otherwise, you need to use this name in the template definition.

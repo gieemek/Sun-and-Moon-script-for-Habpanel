@@ -29,7 +29,7 @@ Note: Only *astral* library is needed. *pytz* and *plunar* are not needed any mo
 ### Script
 You need to put the *shaddow.py* script into your computer. Default location is: /etc/openhab/scripts/.
 If you wish you could change this location (remember to change this in your openHAB rule).
-Script is written in *python3*:
+Script is written in *python3*.
 
 You have to change data to your location:
 ```

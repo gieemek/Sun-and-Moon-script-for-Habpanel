@@ -156,7 +156,7 @@ To add to HABPanel:
 
 Add a template widget with this content:
 ```
-<object data="/static/matrix-theme/shaddow.svg?{{itemValue('Sun_Azimuth')}}" type="image/svg+xml"></object>
+<object data="/static/shaddow.svg?{{itemValue('Sun_Azimuth')}}" type="image/svg+xml"></object>
 ```
 The *?{{itemValue(‘Sun_Azimuth’)}}* ensures that the SVG gets refreshed automatically as the azimuth changes.
 

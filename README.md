@@ -153,6 +153,7 @@ Note: if your Items have other name, you have to use their names in the rule.
 
 ### Habpanel
 To add to HABPanel:
+
 Add a template widget with this content:
 ```
 <object data="/static/matrix-theme/shaddow.svg?{{itemValue('Sun_Azimuth')}}" type="image/svg+xml"></object>

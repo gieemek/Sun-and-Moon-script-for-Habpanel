@@ -5,10 +5,10 @@ import sys
 from datetime import datetime, date, time, timezone
 from astral import LocationInfo, sun, moon
 
-LATITUDE = 49.97056
-LONGITUDE = 20.00859
-TIMEZONE = 'Europe/Warsaw'
-TOWN = 'Sygneczow'
+LATITUDE = 51.505272
+LONGITUDE = -0.159548
+TIMEZONE = "Europe/London"
+TOWN = "London"
 
 FILENAME = '/etc/openhab/html/shaddow.svg'
 
@@ -32,12 +32,7 @@ SHAPE = [
 		{ 'x': 31.9608, 'y': 43.2167 }
 	]
 
-SHAPE_2 = [
-		{ 'x': 52.2524, 'y': 66.8477 }, \
-		{ 'x': 62.0355, 'y': 70.4926 }, \
-		{ 'x': 52.9757, 'y': 94.8097 }, \
-		{ 'x': 43.1926, 'y': 91.1648 }
-	]
+SHAPE_2 = []
 
 ## not really needed to edit anything below
 class shadow( object ) :
@@ -54,9 +49,7 @@ class shadow( object ) :
 		self.sun_elevation = sun.elevation( self.city.observer )
 		print( 'Sun elevation: ' + str( self.sun_elevation ) )
 		sunrise = sun.sunrise( self.city.observer, today )
-		print( 'Sunrise: ' + str( sunrise ) )
 		sunset = sun.sunset( self.city.observer, today )
-		print( 'Sunset: ' + str( sunset ) )
 		self.sunrise_azimuth = sun.azimuth( self.city.observer, sunrise )
 		self.sunset_azimuth = sun.azimuth( self.city.observer, sunset )
 
@@ -70,10 +63,6 @@ class shadow( object ) :
 
 		realSun_pos = self.degreesToPoint( sun_azimuth, 10000 )
 		realMoon_pos = self.degreesToPoint( moon_azimuth, 10000 )
-
-		#if self.debug :
-		#	print( "" )
-		#	print( "Real sun position: " + str( realSun_pos ) )
 
 		self.sun_pos = self.degreesToPoint( sun_azimuth, WIDTH / 2 )
 		self.moon_pos = self.degreesToPoint( moon_azimuth, WIDTH / 2 )

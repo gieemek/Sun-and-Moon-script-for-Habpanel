@@ -10,25 +10,24 @@ I have converted the script to modular, so there is the possibility to include t
 
 ### openHAB
 You need to:
-*add astro:sun Thing based on astro binding.
-*create Sun_Azimuth Item (Number:Angle) and link it with the position#azimuth channel of astro:sun Thing
+- add *astro:sun* Thing based on *astro* binding.
+- create Sun_Azimuth Item (Number:Angle) and link it with the *position#azimuth* channel of *astro:sun* Thing
 
 ### Shell
-You need to install python3:
+You need to install *python3*:
 ```
 apt update && apt install python3 python3-pip -y
 ```
-and additional astral library:
+and additional *astral* library:
 ```
 sudo pip install astral
 ```
-Note: only astral library is needed. pytz and plunar are not needed any more.
+Note: Only *astral* library is needed. *pytz* and *plunar* are not needed any more.
 
 ### Script
-You need to put the shaddow.py script into your computer. Default location is: /etc/openhab/scripts/.
+You need to put the *shaddow.py* script into your computer. Default location is: /etc/openhab/scripts/.
 If you wish you could change this location (remember to change this in your openHAB rule).
-Script is written in python3:
-script code
+Script is written in *python3*:
 
 You have to change data to your location:
 ```
@@ -58,6 +57,7 @@ SHAPE_2 = [
 Note: shapes have to be inside in the 100 x 100pt square.
 Note: you should use any graphical program to read X and Y value of each corner of your house.
 Note: You could start from any point, but point order have to be clockwise.
+
 Below is the drawing how to order points in the shapes:
 picture with point order
 
@@ -134,7 +134,7 @@ Add a template widget with this content:
 ```
 <object data="/static/matrix-theme/shaddow.svg?{{itemValue('Sun_Azimuth')}}" type="image/svg+xml"></object>
 ```
-The ?{{itemValue(‘Sun_Azimuth’)}} ensures that the SVG gets refreshed automatically as the azimuth changes.
+The *?{{itemValue(‘Sun_Azimuth’)}}* ensures that the SVG gets refreshed automatically as the azimuth changes.
 
 Note: If you have changed the location or name of SVG file in the script, you need to change these in the template definition.
 Note: If you have named sun azimuth Item otherwise, you need to use this name in the template definition.

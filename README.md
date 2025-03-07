@@ -78,7 +78,8 @@ STROKE_WIDTH = '1'
 HOURS = 1
 ```
 Below you have drawing with explanation of settings.
-picture with color legend
+
+![color scheme](https://github.com/gieemek/Sun-and-Moon-script-for-Habpanel/blob/main/color%20scheme.jpg)
 
 To check if script works properly, you can start it:
 ```

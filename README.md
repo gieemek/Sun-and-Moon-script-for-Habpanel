@@ -1,20 +1,19 @@
 # Sun-and-Moon-script-for-Habpanel
 Python script to create SVG file with sun and moon positions in relation to your hause
 
-I have adapted the @pmpkk and @kriznik script to the latest astral (v.3.2). The astral library now provides data for the moon, so installing pytz and plunar will no longer be necessary.
+I have adapted the @pmpkk and @kriznik script to the latest *astral* (v.3.2). The *astral* library now provides data for the moon, so installing pytz and plunar will no longer be necessary.
 I have converted the script to modular, so there is the possibility to include two buildings (optional). It will also be easy to rewrite the script for more shapes, if someone would need it.
-pictures of widget with multiple shapes:
 
 ![multiple_shapes](screen multiple shapes.jpg)
 
-## GUIDELINE
+## Guideline
 
-## OPENHAB
+### openHAB
 You need to:
 *add astro:sun Thing based on astro binding.
 *create Sun_Azimuth Item (Number:Angle) and link it with the position#azimuth channel of astro:sun Thing
 
-## SHELL
+### Shell
 You need to install python3:
 ```
 apt update && apt install python3 python3-pip -y
@@ -25,7 +24,7 @@ sudo pip install astral
 ```
 Note: only astral library is needed. pytz and plunar are not needed any more.
 
-## SCRIPT
+### Script
 You need to put the shaddow.py script into your computer. Default location is: /etc/openhab/scripts/.
 If you wish you could change this location (remember to change this in your openHAB rule).
 Script is written in python3:
@@ -89,7 +88,7 @@ with optional parameters:
 2.	wind angle	- draws the wind arrow with given angle. Should be number between 0 – 360 degrees.
 3.	debug		- runs script in debug mode
 Note: It is necessary to specify the preceding parameters if you want to use the following ones.
-### Example:
+#### Example:
 Ad.1 Update of SVG file without wind arrow:
 ```
 python3 /etc/openhab/scripts/shaddow.py update
@@ -102,10 +101,10 @@ Ad.3 Update of SVG file with wind arrow in debug mode:
 ```
 python3 /etc/openhab/scripts/shaddow.py update 54 debug
 ```
-## RULE
+### Rule
 You need to create a rule to call the script:
 
-### DSL (without wind arrow)
+#### DSL (without wind arrow)
 ```
 rule "Generate shaddow SVG"
 when
@@ -114,7 +113,7 @@ then
     executeCommandLine( "python3", "/etc/openhab/scripts/shaddow.py", "update" )
 end
 ```
-### DSL (with wind arrow)
+#### DSL (with wind arrow)
 ```
 rule "Generate shaddow SVG"
 when
@@ -124,12 +123,12 @@ then
     executeCommandLine( "python3", "/etc/openhab/scripts/shaddow.py", "update", (Wind_Angle.state as Number).floatValue.toString )
 end
 ```
-### Jython
+#### Jython
 
 Note: If you have put the script to other location, you need to change path in the rule.
 Note: if your Items have other name, you have to use their names in the rule.
 
-## HABPANEL
+### Habpanel
 To add to HABPanel:
 Add a template widget with this content:
 ```

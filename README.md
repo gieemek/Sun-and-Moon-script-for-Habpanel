@@ -10,8 +10,9 @@ I have converted the script to modular, so there is the possibility to include t
 
 ### openHAB
 You need to:
-- add *astro:sun* Thing based on *astro* binding.
-- create Sun_Azimuth Item (Number:Angle) and link it with the *position#azimuth* channel of *astro:sun* Thing
+- add *astro:sun* Thing based on *astro* binding,
+- create Sun_Azimuth Item (Number:Angle) and link it with the *position#azimuth* channel of *astro:sun* Thing.
+
 Note: If you want to have the wind arrow on the SVG drawing you need to have Wind_Angle Item too (optional).
 
 ### Shell

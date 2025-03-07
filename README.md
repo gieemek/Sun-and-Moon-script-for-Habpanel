@@ -119,7 +119,7 @@ when
     Item Sun_Azimuth received update
 then
     val resp = executeCommandLine( "python3", "/etc/openhab/scripts/shaddow.py", "update" )
-    logInfo( "Shaddow", "Updating Shaddow SVG" + resp )
+    logInfo( "Shaddow", "Updating shaddow.SVG file: " + resp )
 end
 ```
 #### DSL (with wind arrow)
@@ -130,7 +130,7 @@ when
     Item Wind_Angle received update 
 then
     val resp = executeCommandLine( "python3", "/etc/openhab/scripts/shaddow.py", "update", (Wind_Angle.state as Number).floatValue.toString )
-    logInfo( "Shaddow", "Updating Shaddow SVG" + resp )
+    logInfo( "Shaddow", "Updating shaddow.SVG file: " + resp )
 end
 ```
 #### Jython (with wind arrow)

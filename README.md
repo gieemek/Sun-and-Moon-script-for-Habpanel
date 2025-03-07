@@ -59,7 +59,8 @@ Note: you should use any graphical program to read X and Y value of each corner 
 Note: You could start from any point, but point order have to be clockwise.
 
 Below is the drawing how to order points in the shapes:
-picture with point order
+
+![home location scheme](https://github.com/gieemek/Sun-and-Moon-script-for-Habpanel/blob/main/home%20location%20small.jpg)
 
 You could change additional settings:
 ```

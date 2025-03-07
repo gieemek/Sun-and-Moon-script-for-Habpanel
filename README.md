@@ -11,8 +11,8 @@ pictures of widget with multiple shapes:
 
 ## OPENHAB
 You need to:
-•	add astro:sun Thing based on astro binding.
-•	create Sun_Azimuth Item (Number:Angle) and link it with the position#azimuth channel of astro:sun Thing
+*add astro:sun Thing based on astro binding.
+*create Sun_Azimuth Item (Number:Angle) and link it with the position#azimuth channel of astro:sun Thing
 
 ## SHELL
 You need to install python3:

@@ -114,7 +114,8 @@ rule "Generate shaddow SVG"
 when
     Item Sun_Azimuth received update
 then
-    executeCommandLine( "python3", "/etc/openhab/scripts/shaddow.py", "update" )
+    val resp = executeCommandLine( "python3", "/etc/openhab/scripts/shaddow.py", "update" )
+    logInfo( "Shaddow", "Updating Shaddow SVG" + resp )
 end
 ```
 #### DSL (with wind arrow)
@@ -124,11 +125,23 @@ when
     Item Sun_Azimuth received update or
     Item Wind_Angle received update 
 then
-    executeCommandLine( "python3", "/etc/openhab/scripts/shaddow.py", "update", (Wind_Angle.state as Number).floatValue.toString )
+    val resp = executeCommandLine( "python3", "/etc/openhab/scripts/shaddow.py", "update", (Wind_Angle.state as Number).floatValue.toString )
+    logInfo( "Shaddow", "Updating Shaddow SVG" + resp )
 end
 ```
 #### Jython
+```
+from core.rules import rule
+from core.triggers import when
+from core.actions import LogAction, Exec
 
+@rule( "Run script shaddow", description = "Run script to create SVG drawing with sun and moon positions in relation to the house", tags = [ "shaddow" ] )
+@when( "Item Sun_Azimuth changed" )
+
+def runScriptToCreateSVGfile( event ) :
+	resp = Exec.executeCommandLine( Duration.ofSeconds(10), "python3", "/etc/openhab/scripts/shaddow.py", "update", str( items[ "Wind_Angle" ].floatValue() ) )
+	LogAction.logInfo( "rule:runScriptToCreateSVGfile", "Updating shaddow.SVG file: {}", resp )
+```
 Note: If you have put the script to other location, you need to change path in the rule.
 Note: if your Items have other name, you have to use their names in the rule.
 

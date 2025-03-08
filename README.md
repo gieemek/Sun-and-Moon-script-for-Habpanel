@@ -56,9 +56,9 @@ SHAPE_2 = [
       { 'x': yourXvalueOfFourthCorner, 'y': yourYvalueOfFourthCorner }
    ]
 ```
-Note: shapes have to be inside in the 100 x 100pt square.
+Note: Shapes have to be inside in the 100 x 100pt square.
 
-Note: you should use any graphical program to read X and Y value of each corner of your house.
+Note: You should use any graphical program to read X and Y value of each corner of your house.
 
 Note: You could start from any point, but point order have to be clockwise.
 
@@ -149,7 +149,7 @@ def runScriptToCreateSVGfile( event ) :
 ```
 Note: If you have put the script to other location, you need to change path in the rule.
 
-Note: if your Items have other name, you have to use their names in the rule.
+Note: If your Items have other name, you have to use their names in the rule.
 
 ### Habpanel
 To add to HABPanel:

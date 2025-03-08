@@ -85,7 +85,7 @@ Below you have drawing with explanation of settings.
 
 ![color scheme](https://github.com/gieemek/Sun-and-Moon-script-for-Habpanel/blob/main/color%20scheme.jpg)
 
-To check if script works properly, you can start it:
+To check if script works properly, you can start it in the command line:
 ```
 python3 /etc/openhab/scripts/shaddow.py
 ```

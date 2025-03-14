@@ -458,10 +458,10 @@ class shadow( object ) :
 				left_radius = -left_radius
 				left_sweep = 1
 
-			svg = '<path stroke="none" stroke-width="0" fill="' + MOON_COLOR \
-			+ '" d="M ' + str( self.moon_pos['x'] ) + ' ' + str( self.moon_pos['y'] - MOON_RADIUS ) \
-			+ ' A ' + str( left_radius ) + ' ' + str( MOON_RADIUS ) + ' 0 0 ' + str( left_sweep ) + ' ' + str( self.moon_pos['x'] ) + ' ' + str( self.moon_pos['y'] + MOON_RADIUS ) \
-			+ '   ' + str( right_radius ) + ' ' + str( MOON_RADIUS ) + ' 0 0 ' + str( right_sweep ) + ' ' + str( self.moon_pos['x'] ) + ' ' + str( self.moon_pos['y'] - MOON_RADIUS ) + ' z" />'
+		svg = '<path stroke="none" stroke-width="0" fill="' + MOON_COLOR \
+		+ '" d="M ' + str( self.moon_pos['x'] ) + ' ' + str( self.moon_pos['y'] - MOON_RADIUS ) \
+		+ ' A ' + str( left_radius ) + ' ' + str( MOON_RADIUS ) + ' 0 0 ' + str( left_sweep ) + ' ' + str( self.moon_pos['x'] ) + ' ' + str( self.moon_pos['y'] + MOON_RADIUS ) \
+		+ '   ' + str( right_radius ) + ' ' + str( MOON_RADIUS ) + ' 0 0 ' + str( right_sweep ) + ' ' + str( self.moon_pos['x'] ) + ' ' + str( self.moon_pos['y'] - MOON_RADIUS ) + ' z" />'
 
 		return svg
 
